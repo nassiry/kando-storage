@@ -74,6 +74,9 @@ kando('local.user.profile.name', null); // Only removes 'name' from profile
 // Example array: ['read', 'write', 'delete']
 kando('local.user.permissions', ['read', 'write', 'delete']);
 
+// Example update/replace array key
+kando('local.user.permissions[1]', 'view');
+
 // Remove an element from the array
 kando('local.user.permissions[1]', null); // Now permissions will be ['read', 'delete']
 
