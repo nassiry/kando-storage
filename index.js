@@ -53,14 +53,14 @@
     };
 
     // Get nested value in an object, handles array indices
-    const getNestedValue = (obj, path) => path.split('.').reduce((acc, key) => {
+    const getValues = (obj, path) => path.split('.').reduce((acc, key) => {
         if (acc == null) return;
         const arrayMatch = key.match(/(.+)\[(\d+)\]/);
         return arrayMatch ? acc[arrayMatch[1]]?.[arrayMatch[2]] : acc[key];
     }, obj);
 
     // Set nested value in an object, supporting array indices
-    const setNestedValue = (obj, path, value) => {
+    const setValues = (obj, path, value) => {
         const keys = path.split('.');
         const lastKey = keys.pop();
         const target = keys.reduce((acc, key) => {
@@ -82,7 +82,7 @@
     };
 
     // Remove nested value in an object, supporting array indices
-    const removeNestedValue = (obj, path) => {
+    const removeValues = (obj, path) => {
         const keys = path.split('.');
         const lastKey = keys.pop();
         const parent = keys.reduce((acc, key) => {
@@ -131,7 +131,7 @@
 
     // Start the cleanup interval when needed
     const startCleanup = () => {
-        if (!cleanupInterval) cleanupInterval = setInterval(sessionCleanup, 30000);
+        if (!cleanupInterval) cleanupInterval = setInterval(sessionCleanup, 15000);
     };
 
     // check for expiration and remove session from storage
@@ -153,21 +153,21 @@
         if (type === 'session' && data === undefined) {
             const expiresAt = parseInt(storage.getItem(`${rootKey}.${path}.expires`), 10);
             if (isExpired(expiresAt)) {
-                removeNestedValue(rootData, path);
+                removeValues(rootData, path);
                 storage.setItem(rootKey, JSON.stringify(rootData));
                 storage.removeItem(`${rootKey}.${path}.expires`);
                 return undefined;
             }
-            return getNestedValue(rootData, path);
+            return getValues(rootData, path);
         }
 
-        if (data === undefined) return getNestedValue(rootData, path);
+        if (data === undefined) return getValues(rootData, path);
 
         if (data === null) {
-            path === rootKey ? clearNamespace(storage, rootKey) : removeNestedValue(rootData, path);
+            path === rootKey ? clearNamespace(storage, rootKey) : removeValues(rootData, path);
             storage.setItem(rootKey, JSON.stringify(rootData));
         } else {
-            setNestedValue(rootData, path, data);
+            setValues(rootData, path, data);
             storage.setItem(rootKey, JSON.stringify(rootData));
             if (type === 'session') handleExpiration(storage, rootKey, expiration);
         }

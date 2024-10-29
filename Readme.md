@@ -153,4 +153,4 @@ Latest ✔ | Latest ✔ | Latest ✔ | Latest ✔ | Latest ✔ | Latest ✔
 
 
 ## License
-[MIT](LICENSE)
+The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
