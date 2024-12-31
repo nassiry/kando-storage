@@ -1,3 +1,6 @@
+![npm](https://img.shields.io/npm/v/kando-storage.svg)
+![Downloads](https://img.shields.io/npm/dm/kando-storage.svg)
+![License](https://img.shields.io/npm/l/kando-storage.svg)
 # Kando
 
 **Kando** is a versatile and lightweight `2kb` gzip storage utility that simplifies data management in both `localStorage` and `sessionStorage`. Unlike other storage packages, **Kando** offers an intuitive API that enables effortless manipulation of single values, arrays, and objects, while providing robust support for nested paths, namespaces, and data expiration in session storage. Designed for compatibility with both browser and `Node.js` environments, Kando includes an `in-memory` fallback for situations where storage `APIs` are not available. Whether you're building a simple web application or a complex `Node.js` project, Kando enhances your storage experience with its flexible and user-friendly approach.
