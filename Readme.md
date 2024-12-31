@@ -1,6 +1,6 @@
 # Kando
 
-**Kando** is a versatile and lightweight `2kb` gzip storage utility that simplifies data management in both `localStorage` and `sessionStorage`. Unlike other storage packages, Kando offers an intuitive API that enables effortless manipulation of single values, arrays, and objects, while providing robust support for nested paths, namespaces, and data expiration in session storage. Designed for compatibility with both browser and `Node.js` environments, Kando includes an `in-memory` fallback for situations where storage `APIs` are not available. Whether you're building a simple web application or a complex `Node.js` project, Kando enhances your storage experience with its flexible and user-friendly approach.
+**Kando** is a versatile and lightweight `2kb` gzip storage utility that simplifies data management in both `localStorage` and `sessionStorage`. Unlike other storage packages, **Kando** offers an intuitive API that enables effortless manipulation of single values, arrays, and objects, while providing robust support for nested paths, namespaces, and data expiration in session storage. Designed for compatibility with both browser and `Node.js` environments, Kando includes an `in-memory` fallback for situations where storage `APIs` are not available. Whether you're building a simple web application or a complex `Node.js` project, Kando enhances your storage experience with its flexible and user-friendly approach.
 
 ## Why Use Kando?
 
@@ -8,7 +8,7 @@
 - **Namespace Management**: Organize storage by namespaces, simplifying data retrieval and removal.
 - **Nested Path Access**: Access deeply nested properties with dot notation.
 - **Data Expiration**: Set expiration times for session data.
-- **Flexible Storage**: Supports single values, arrays, and objects.
+- **Flexible Storage**: Supports single `values`, `arrays`, and `objects`.
 
 ---
 
@@ -138,7 +138,7 @@ The core Kando function for all storage operations. Allows setting, retrieving, 
     * **Any value:** Sets or updates data at the path.
 * `expiration` (`number`, optional): Expiration time in seconds, only applicable for `sessionStorage`.
 ### Return Value
-* **Retrieving Data:** Returns the current value if data is not provided.
+* **Retrieving Data:** Returns the current `value` if data is not provided.
 * **Setting Data:** Returns `true` upon successful set or update.
 * **Removing Data:** Returns `null` if the key or namespace does not exist.
 
