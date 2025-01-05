@@ -26,12 +26,12 @@ Install Kando with npm:
 npm install kando-storage
 ```
 ## Browser
-```bash
+```html
 <script src="path/to/kando.js"></script>
 ```
 ## Examples:
 ### Nodejs
-```bash
+```javascript
 const kando = require('kando-storage');
 ```
 
@@ -39,7 +39,7 @@ const kando = require('kando-storage');
 Kando offers flexible functions for setting, retrieving, and deleting data, all with dot notation for accessing deeply nested properties.
 ### Setting and Retrieving Data
 ### Single Values
-```bash
+```javascript
 // Set a single value in local storage
 kando('local.appSettings.theme', 'dark');
 
@@ -47,7 +47,7 @@ kando('local.appSettings.theme', 'dark');
 const theme = kando('local.appSettings.theme'); // 'dark'
 ```
 ### Objects and Arrays
-```bash
+```javascript
 // Set an object
 kando('local.user.profile', { name: 'Alice', age: 30 });
 
@@ -61,7 +61,7 @@ kando('local.user.permissions', ['read', 'write']);
 const permissions = kando('local.user.permissions'); // ['read', 'write']
 ```
 ### Nested Properties
-```bash
+```javascript
 // Update a nested property within an object
 kando('local.user.profile.name', 'Alice Johnson');
 
@@ -71,7 +71,7 @@ const updatedProfile = kando('local.user.profile'); // { name: 'Alice Johnson', 
 ## Clearing Data Examples
 Kando allows you to remove specific keys or entire namespaces with ease.
 ### Removing Specific Keys
-```bash
+```javascript
 // Remove a specific key
 kando('local.user.profile.name', null); // Only removes 'name' from profile
 
@@ -86,13 +86,13 @@ kando('local.user.permissions[1]', null); // Now permissions will be ['read', 'd
 
 ```
 ### Clearing an Entire Namespace
-```bash
+```javascript
 // Remove all data under the 'user' namespace
 kando('local.user', null);
 ```
 ## Session Storage with Expiration
 For session storage, Kando supports setting an expiration time in seconds.
-```bash
+```javascript
 // Store a session value with a 60-second expiration
 kando('session.tempData', 'Temporary Data', 60);
 
@@ -103,7 +103,7 @@ const tempData = kando('session.tempData'); // 'Temporary Data'
 ```
 ## Advanced Examples
 ### Namespaced Data with Nested Objects and Arrays
-```bash
+```javascript
 // Store a namespaced object with arrays
 kando('local.appConfig', {
   theme: 'dark',
@@ -123,7 +123,7 @@ kando('local.appConfig.languages[3]', 'de'); // ['en', 'es', 'fr', 'de']
 ```
 ## Using Kando with Storage Fallback
 If `localStorage` or `sessionStorage` is unsupported (such as in certain `Node.js` environments), Kando automatically falls back to an in-memory `Map`.
-```bash
+```javascript
 // This will use the Map if storage APIs are unavailable
 kando('local.userData', { id: 1, name: 'Bob' });
 const userData = kando('local.userData'); // { id: 1, name: 'Bob' }
