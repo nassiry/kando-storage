@@ -1,26 +1,26 @@
 {
     "name": "kando-storage",
-    "version": "2.0.0",
+    "version": "3.0.0",
     "description": "A lightweight and flexible storage helper for managing data in both browser and Node.js environments.",
     "main": "index.js",
     "scripts": {
-      "test": "echo \"No tests specified\" && exit 0"
+        "test": "echo \"No tests specified\" && exit 0"
     },
     "keywords": [
-      "storage",
-      "helper",
-      "localStorage",
-      "sessionStorage",
-      "node"
+        "storage",
+        "helper",
+        "localStorage",
+        "sessionStorage",
+        "node"
     ],
     "author": "A.S Nasseri",
     "license": "MIT",
     "repository": {
-      "type": "git",
-      "url": "git+https://github.com/nassiry/kando-storage.git"
+        "type": "git",
+        "url": "git+https://github.com/nassiry/kando-storage.git"
     },
     "bugs": {
-      "url": "https://github.com/nassiry/kando-storage/issues"
+        "url": "https://github.com/nassiry/kando-storage/issues"
     },
     "homepage": "https://github.com/nassiry/kando-storage#readme"
-  }
+}

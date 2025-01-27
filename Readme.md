@@ -8,7 +8,7 @@
 
 </div>
 
-**Kando** is a versatile and lightweight `2kb` gzip storage utility that simplifies data management in both `localStorage` and `sessionStorage`. Unlike other storage packages, **Kando** offers an intuitive API that enables effortless manipulation of single values, arrays, and objects, while providing robust support for nested paths, namespaces, and data expiration in session storage. Designed for compatibility with both browser and `Node.js` environments, Kando includes an `in-memory` fallback for situations where storage `APIs` are not available. Whether you're building a simple web application or a complex `Node.js` project, Kando enhances your storage experience with its flexible and user-friendly approach.
+**Kando** is a versatile and lightweight `2kb` gzip storage utility that simplifies data management in both `localStorage` and `sessionStorage`. Unlike other storage packages, **Kando** offers an intuitive API that enables effortless manipulation of `single values`, `arrays`, and `objects`, while providing robust support for nested paths, namespaces, and data expiration in session storage. Designed for compatibility with both browser and `Node.js` environments, Kando includes an `in-memory` fallback for situations where storage `APIs` are not available. Whether you're building a simple web application or a complex `Node.js` project, Kando enhances your storage experience with its flexible and user-friendly approach.
 
 ## Why Use Kando?
 
@@ -159,6 +159,9 @@ Chrome | Firefox | Safari | Opera | Edge | Nodejs
 --- | --- | --- | --- | --- | --- |
 Latest ✔ | Latest ✔ | Latest ✔ | Latest ✔ | Latest ✔ | Latest ✔
 
+### Contributing
 
-## License
-The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
+Feel free to submit issues or pull requests to improve the package. Contributions are welcome!
+
+### License
+This package is open-source software licensed under the [MIT license](LICENSE).

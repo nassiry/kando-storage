@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script src="index.js"></script>
+<script>
+    // Set an object
+    kando('local.user.profile', { name: 'Alice', age: 30 });
+
+    // Retrieve an object
+    const profile = kando('local.user.profile'); // { name: 'Alice', age: 30 }
+
+    console.log(profile);
+    // Set an array
+    kando('local.user.permissions', ['read', 'write']);
+
+    // Retrieve an array
+    const permissions = kando('local.user.permissions'); // ['read', 'write']
+
+    console.log(permissions);
+</script>
+</body>
+</html>
