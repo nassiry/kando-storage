@@ -1,0 +1,11 @@
+node_modules
+dist
+*.min.js
+*.mjs
+*.md
+*.json
+*.prettierrc
+jest.config.js
+coverage
+.github
+test

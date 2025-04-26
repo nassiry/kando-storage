@@ -1,26 +1,47 @@
 {
-    "name": "kando-storage",
-    "version": "3.0.0",
-    "description": "A lightweight and flexible storage helper for managing data in both browser and Node.js environments.",
-    "main": "index.js",
-    "scripts": {
-        "test": "echo \"No tests specified\" && exit 0"
-    },
-    "keywords": [
-        "storage",
-        "helper",
-        "localStorage",
-        "sessionStorage",
-        "node"
-    ],
-    "author": "A.S Nasseri",
-    "license": "MIT",
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/nassiry/kando-storage.git"
-    },
-    "bugs": {
-        "url": "https://github.com/nassiry/kando-storage/issues"
-    },
-    "homepage": "https://github.com/nassiry/kando-storage#readme"
+  "name": "kando-storage",
+  "version": "3.0.0",
+  "description": "A lightweight and flexible storage helper for managing data in both browser and Node.js environments.",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "scripts": {
+    "test": "jest",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "lint:fix": "eslint . --fix"
+  },
+  "keywords": [
+    "storage",
+    "helper",
+    "localStorage",
+    "sessionStorage",
+    "node"
+  ],
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "README.md",
+    "LICENSE"
+  ],
+  "author": "A.S Nasseri",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nassiry/kando-storage.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nassiry/kando-storage/issues"
+  },
+  "homepage": "https://github.com/nassiry/kando-storage#readme",
+  "devDependencies": {
+    "@eslint/js": "^9.25.1",
+    "codecov": "^3.8.2",
+    "eslint": "^9.25.1",
+    "eslint-config-prettier": "^10.1.2",
+    "eslint-plugin-prettier": "^5.2.6",
+    "globals": "^16.0.0",
+    "jest": "^29.7.0",
+    "prettier": "^3.5.3",
+    "typescript-eslint": "^8.31.0"
+  }
 }

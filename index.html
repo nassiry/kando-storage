@@ -1,27 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Kando Test</title>
 </head>
 <body>
-
+<h2>Kando Manual Test</h2>
 <script src="index.js"></script>
 <script>
-    // Set an object
+    console.log('--- Testing localStorage ---');
+
+    kando('local.appSettings.theme', 'dark');
+    console.log('Theme:', kando('local.appSettings.theme'));
+
     kando('local.user.profile', { name: 'Alice', age: 30 });
+    console.log('Profile:', kando('local.user.profile'));
 
-    // Retrieve an object
-    const profile = kando('local.user.profile'); // { name: 'Alice', age: 30 }
+    kando('local.user.profile.name', 'Alice Johnson');
+    console.log('Updated Profile:', kando('local.user.profile'));
 
-    console.log(profile);
-    // Set an array
-    kando('local.user.permissions', ['read', 'write']);
+    kando('local.user.permissions', ['read', 'write', 'delete']);
+    kando('local.user.permissions[1]', 'view');
+    console.log('Permissions after update:', kando('local.user.permissions'));
 
-    // Retrieve an array
-    const permissions = kando('local.user.permissions'); // ['read', 'write']
+    kando('local.user.permissions[1]', null);
+    console.log('Permissions after remove:', kando('local.user.permissions'));
 
-    console.log(permissions);
+    kando('local.user.profile.name', null);
+    console.log('Profile after key removal:', kando('local.user.profile'));
+
+   kando('local.user', null);
+    console.log('User after namespace removal:', kando('local.user'));
+
+    console.log('--- Testing sessionStorage with expiration ---');
+    kando('session.tempData', 'Temporary Data', 3);
+    console.log('Temp Data:', kando('session.tempData'));
+
+    setTimeout(() => {
+        console.log('Temp Data after 4 sec:', kando('session.tempData'));
+    }, 4000);
 </script>
 </body>
 </html>
