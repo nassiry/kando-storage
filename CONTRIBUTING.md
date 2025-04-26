@@ -21,7 +21,7 @@ cd kando-storage
 npm install
 ```
 
-### Available Scripts
+### 3. Available Scripts
 
 - `npm test` Run tests with [Jest](https://jestjs.io/)
 - `npm run lint` Check for lint issues with ESLint
@@ -29,7 +29,7 @@ npm install
 - `npm run format` Format code using Prettier 
 - `npx jest --coverage` For test coverage
 
-### Code Style
+### 4. Code Style
 We use ESLint and Prettier to enforce code quality and formatting.
 
 Run before committing:
@@ -40,7 +40,7 @@ npm run format
 ```
 > Use a code editor with ESLint & Prettier plugins for auto-formatting on save.
 
-### Writing Tests
+### 5. Writing Tests
 
 - All tests live in the `test/` directory.
 - We use Jest for unit testing.
@@ -52,7 +52,7 @@ npx jest --coverage
 ```
 Aim to maintain or increase coverage where possible.
 
-### Commit Guidelines.
+### 6. Commit Guidelines.
 
 Please follow clear and descriptive commit messages:
 
@@ -61,7 +61,7 @@ Please follow clear and descriptive commit messages:
 - `test: cover nested array edge cases`
 - `chore: format files with Prettier`
 
-### Best Practices
+### 7. Best Practices
 
 - Keep PRs focused and minimal.
 - Use the in-memory fallback only in test environments.
